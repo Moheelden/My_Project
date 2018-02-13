@@ -1,5 +1,4 @@
-from models import Membre
-from models import Post
+from models import Membre ,Post
 
 name1 = "ahmed"
 name2 = "ali"
