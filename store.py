@@ -61,7 +61,7 @@ class MemberStore:
 
         for member , post in itertools.product(all_members , all_posts) :
             if member.id is post.member_id:
-                all_members.append(member)
+                member.posts.append(post)
 
         return all_members
 
