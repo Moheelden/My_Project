@@ -1,10 +1,12 @@
 from flask import Flask , render_template
+import dummy_data
 
 app = Flask(__name__)
 
-@app.route("/<string:page_name>/")
+@app.route("/")
+@app.route("/index")
 
-def home(page_name):
-    return render_template('%s.html' % page_name )
+def home():
+    return render_template("index.html" , posts = dummy_data.post_store.get_all())
 
 app.run()
